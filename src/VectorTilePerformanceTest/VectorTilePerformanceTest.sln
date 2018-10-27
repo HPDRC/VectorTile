@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VectorTilePerformanceTest", "VectorTilePerformanceTest\VectorTilePerformanceTest.csproj", "{836364AE-3F96-48B8-869D-A6FDB52D655E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.cs.fiu.edu:8080/tfs
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = VectorTilePerformanceTest\\VectorTilePerformanceTest.csproj
+		SccProjectName1 = VectorTilePerformanceTest
+		SccLocalPath1 = VectorTilePerformanceTest
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{836364AE-3F96-48B8-869D-A6FDB52D655E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836364AE-3F96-48B8-869D-A6FDB52D655E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836364AE-3F96-48B8-869D-A6FDB52D655E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836364AE-3F96-48B8-869D-A6FDB52D655E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,49 @@
+### Performance Indicator / LAG
+- Since we don't have a very large load of users, the load capability is really not so important. The response speed matters a lot.
+- Cache is not very helpful because we allow users to select and view random combination of layers.
+- So our main goal is to optimize the response speed (without a cache)
+- How to measure response time is very tricky:
+	- A typical loading test will be simulating x users requesting random tiles
+	- But the response time a real user feels on a map viewer would be the duration starting from him panning to a new map location, ending with all tiles are loaded within the map viewer.
+	- So I measure the response time manually by:
+		- With chrome browser, open a map viewer with layer selector
+		- Open chrome debug tool and switch to Network tab
+		- Unselect a layer
+		- Clear chrome cache, clear Network log
+		- Restart renderd with all cache cleared
+		- Reselect the layer and take the duration of all requests are ready as the response time
+	- I define this response time (unit is second) as LAG. And lower LAG means a better user experience with speed of the map.
+	- Maybe it's possible to automate this measuring process in a Visual Studio Test Project?
+
+### Optimize METATILE parameter
+- METATILE is defined inside mod_tile project and changing it requires re-compile the project. It can be changed in `mod_tile/includes/renderd_conf.h`.
+- By default, METATILE=8, which means an 8*8 area will be rendered together even if only one tile in this area is requested.
+- A greater value means higher total serving capability (because there is smaller waste when data are fetched together and renderd together), but lower response speed.
+- A smaller value will not save data fetching time (theoretically, it'll increase the time), but will speed up rendering because different metatiles are renderd in parallel.
+- At an example location, metatile=8/4/2 has a LAG of 13/8/4 respectively (more tests needed).
+
+### Optimize renderd thread count
+- So far, all tests show that the disk speed is the major bottleneck and accounts for at least 95% of the time cost.
+- According to the above fact, a renderd thread count (edit in renderd.conf) of 2 would be very enough. Higher thread count may have even worse performance.
+- In fact you can even set it to 1.
+
+### About !scale_denominator!
+- !scale_denominator! can be used to optimize db queries
+- scale_denominator: 3/69885184, 4/34942592, 5/17471296, 6/8735648, 7/4367824, 8/2183912, 9/1091956, 
+						10/545978, 11/272989, 12:136494, 13:68247, 14:34123, 15/17061
+- scale_denominator: 3.5/50000000, 4.5/25000000, 5.5/10000000, 6.5/5000000, 7.5/2500000, 8.5/1500000, 9.5/750000, 
+						10.5/400000, 11.5/200000, 12.5/100000, 13.5/50000, 14.5/25000, 15.5/10000
+- scale = scale_denominator/0.00028, so: 8/611.2, 9/305.6, 10/152.8, 11/76.4, 12:38.2, 13:19.1, 14:9.5, 15/4.8
+- Sample use:
+```
+SELECT type, name, area, stylegroup, point AS geometry
+	FROM osm_area_label
+	WHERE area>=
+			(CASE 
+				WHEN !scale_denominator! > 50000 THEN 1600000 
+				WHEN !scale_denominator! > 10000 THEN 80000 
+				ELSE 0 
+			END)
+		and geometry && !bbox! 
+	ORDER BY area DESC
+```

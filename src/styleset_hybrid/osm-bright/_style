@@ -1,0 +1,263 @@
+/* BASE.MSS CONTENTS
+ * - Water areas
+ * - Water ways
+ * - Administrative Boundaries
+ *
+ */
+
+// ADMIN boundaries
+#osm_admin[zoom>=2] {
+  line-width:1;
+  line-color:darken(@tf_bg_grey,10%);
+}
+
+/* ---- BUILDINGS ---- */
+#osm_buildings[zoom>=15] {
+  line-color:@building;
+  [zoom=15] { line-width:0.8; }
+  [zoom=16] { line-width:1.0; }
+  [zoom=17] { line-width:1.5; }
+  [zoom>=18] { line-width:2.0; }
+}
+
+/* ================================================================== */
+/* WATER AREAS
+/* ================================================================== */
+
+#osm_waterarea[zoom>5] {
+  line-color: @water;
+  line-width: 1;
+  [zoom<8]{ line-width: 0.6; }
+  [zoom<12]{ line-width: 0.8; }
+}
+
+/* ================================================================== */
+/* WATER WAYS
+/* ================================================================== */
+
+#osm_waterway[zoom>=8][zoom<=12] {
+  line-color: @water;
+  [zoom=8] { line-width: 0.6; }
+  [zoom=9] { line-width: 0.6; }
+  [zoom=10]{ line-width: 0.6; }
+  [zoom=11]{ line-width: 0.6; }
+  [zoom=12]{ line-width: 0.8; }
+}
+
+#osm_waterway[zoom>=13][zoom<=14] {
+  line-color: @water;
+  [type='river'],
+  [type='canal'] {
+    line-cap: round;
+    line-join: round;
+    [zoom=13]{ line-width: 1; }
+    [zoom=14]{ line-width: 1.5; }
+  }
+  [type='stream'] {
+    [zoom=13]{ line-width: 0.3; }
+    [zoom=14]{ line-width: 0.6; }
+  }
+}
+  
+#osm_waterway[zoom>=15] {
+  line-color: @water;
+  [type='river'],
+  [type='canal'] {
+    line-cap: round;
+    line-join: round;
+    [zoom=15]{ line-width: 2; }
+    [zoom=16]{ line-width: 3; }
+    [zoom=17]{ line-width: 4; }
+    [zoom=18]{ line-width: 5; }
+    [zoom=19]{ line-width: 6; }
+    [zoom>19]{ line-width: 7; }
+  }
+  [type='stream'] {
+    [zoom=15]{ line-width: 0.6; }
+    [zoom=16]{ line-width: 0.8; }
+    [zoom=17]{ line-width: 1; }
+    [zoom=18]{ line-width: 1.5; }
+    [zoom>18]{ line-width: 2; }
+  }
+  [type='ditch'],
+  [type='drain'] {
+    [zoom=15]{ line-width: 0.1; }
+    [zoom=16]{ line-width: 0.3; }
+    [zoom=17]{ line-width: 0.5; }
+    [zoom=18]{ line-width: 0.7; }
+    [zoom=19]{ line-width: 1; }
+    [zoom>19]{ line-width: 1.5; }
+  }
+}
+
+/* ================================================================== */
+/* BARRIER POINTS
+/* ================================================================== */
+
+
+#osm_barrier_points[zoom>=17][stylegroup = 'divider'] {
+  marker-height: 2;
+  marker-fill: #c7c7c7;
+  marker-line-opacity:0;
+  marker-allow-overlap:true;
+}
+
+/* ================================================================== */
+/* BARRIER LINES
+/* ================================================================== */
+
+#osm_barrier_lines[zoom>=17][stylegroup = 'gate'] {
+  line-width:2.5;
+  line-color:#aab;
+  line-dasharray:3,2;
+}
+
+#osm_barrier_lines[zoom>=17][stylegroup = 'fence'] {
+  line-width:1.75;
+  line-color:#aab;
+  line-dasharray:1,1;
+}
+
+#osm_barrier_lines[zoom>=17][stylegroup = 'hedge'] {
+  line-width:3;
+  line-color:darken(@park,5%);
+
+}
+
+/* ================================================================== */
+/* FONTS
+/* ================================================================== */
+
+/* directory to load fonts from in addition to the system directories */
+Map { font-directory: url(./fonts); }
+
+/* set up font sets for various weights and styles */
+@sans_lt:           "Open Sans Regular","DejaVu Sans Book","unifont Medium";
+@sans_lt_italic:    "Open Sans Italic","DejaVu Sans Italic","unifont Medium";
+@sans:              "Open Sans Semibold","DejaVu Sans Book","unifont Medium";
+@sans_italic:       "Open Sans Semibold Italic","DejaVu Sans Italic","unifont Medium";
+@sans_bold:         "Open Sans Bold","DejaVu Sans Bold","unifont Medium";
+@sans_bold_italic:  "Open Sans Bold Italic","DejaVu Sans Bold Italic","unifont Medium";
+
+/* Some fonts are larger or smaller than others. Use this variable to
+   globally increase or decrease the font sizes. */
+/* Note this is only implemented for certain things so far */
+@text_adjust: 2;
+
+/* ================================================================== */
+/* LANDUSE & LANDCOVER COLORS
+/* ================================================================== */
+
+@land:              #FCFBE7;
+@water:             #C4DFF6;
+@grass:             #E6F2C1;
+@beach:             #FFEEC7;
+@park:              #DAF2C1;
+@cemetery:          #D6DED2;
+@wooded:            #C3D9AD;
+@agriculture:       #F2E8B6;
+
+@building:          rgb(82,195,206);
+@hospital:          rgb(229,198,195);
+@school:            #FFF5CC;
+@sports:            #B8E6B8;
+
+@residential:       @land * 0.98;
+@commercial:        @land * 0.97;
+@industrial:        @land * 0.96;
+@parking:           #EEE;
+
+/* ================================================================== */
+/* ROAD COLORS
+/* ================================================================== */
+
+/* For each class of road there are three color variables:
+ * - line: for lower zoomlevels when the road is represented by a
+ *         single solid line.
+ * - case: for higher zoomlevels, this color is for the road's
+ *         casing (outline).
+ * - fill: for higher zoomlevels, this color is for the road's
+ *         inner fill (inline).
+ */
+@road_opacity:      0.45;
+
+@motorway_line:     #E65C5C;
+@motorway_fill:     lighten(@motorway_line,10%);
+@motorway_case:     @motorway_line * 0.9;
+
+@trunk_line:        #E68A5C;
+@trunk_fill:        lighten(@trunk_line,10%);
+@trunk_case:        @trunk_line * 0.9;
+
+@primary_line:      #FFC859;
+@primary_fill:      lighten(@primary_line,10%);
+@primary_case:      @primary_line * 0.9;
+
+@secondary_line:    #FFE873;
+@secondary_fill:    lighten(@secondary_line,10%);
+@secondary_case:    @secondary_line * 0.9;
+
+@standard_line:     @land * 0.85;
+@standard_fill:     #fff;
+@standard_case:     @land * 0.9;
+
+@pedestrian_line:   @standard_line;
+@pedestrian_fill:   #FAFAF5;
+@pedestrian_case:   @land;
+
+@cycle_line:        @standard_line;
+@cycle_fill:        #FAFAF5;
+@cycle_case:        @land;
+
+@rail_line:         #999;
+@rail_fill:         #fff;
+@rail_case:         @land;
+
+@aeroway:           #df9090;
+
+/* ================================================================== */
+/* LABEL COLORS
+/* ================================================================== */
+
+/* We set up a default halo color for places so you can edit them all
+   at once or override each individually. */
+@place_halo:        black;
+
+@country_text:      white;
+@country_halo:      @place_halo;
+
+@state_text:        white;
+@state_halo:        @place_halo;
+
+@city_text:         white;
+@city_halo:         @place_halo;
+
+@town_text:         white;
+@town_halo:         @place_halo;
+
+@road_text:         white;
+@road_halo:         @place_halo;
+
+@other_text:        white;
+@other_halo:        @place_halo;
+
+@locality_text:     white;
+@locality_halo:     @place_halo;
+
+/* Also used for other small places: hamlets, suburbs, localities */
+@village_text:      white;
+@village_halo:      @place_halo;
+
+/* ****************************************************************** */
+
+@tf_main_blue:      #002F6B;
+@tf_ligher_blue:    #0066cc;
+@tf_darker_blue:    #003377;
+@tf_accent_green:   #558811;
+@tf_accent_red:     #810D0D;
+@tf_accent_yellow:  #FFC200;
+@tf_dark_grey:      #646460;
+@tf_bg_beige:       #f2f2e6;
+@tf_bg_grey:        #ebebeb;
+@tf_legacy_blue:    #00618D;
+

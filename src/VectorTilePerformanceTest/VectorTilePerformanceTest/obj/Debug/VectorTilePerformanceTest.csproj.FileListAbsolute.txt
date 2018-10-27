@@ -1,0 +1,8 @@
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\bin\Debug\VectorTilePerformanceTest.exe.config
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\bin\Debug\VectorTilePerformanceTest.exe
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\bin\Debug\VectorTilePerformanceTest.pdb
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\obj\Debug\VectorTilePerformanceTest.csprojResolveAssemblyReference.cache
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\obj\Debug\VectorTilePerformanceTest.Properties.Resources.resources
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\obj\Debug\VectorTilePerformanceTest.csproj.GenerateResource.Cache
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\obj\Debug\VectorTilePerformanceTest.exe
+E:\Projects\tfs\TerraFly\Engines\VectorTile\src\VectorTilePerformanceTest\VectorTilePerformanceTest\obj\Debug\VectorTilePerformanceTest.pdb

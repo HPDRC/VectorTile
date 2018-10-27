@@ -1,0 +1,1159 @@
+{
+  "bounds": [
+    -83.8477,
+    24.3671,
+    -78.9258,
+    29.9169
+  ],
+  "center": [
+    -80.2771,
+    26.1998,
+    8
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "polygon.mss",
+    "line.mss",
+    "shield.mss",
+    "label.mss"
+  ],
+  "Layer": [
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape"
+      }
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999692067183,
+        -85.051,
+        179.99999692067183,
+        83.66933300000005
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_coastline",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-20037508,-20037471.2051371,20037508,18464390.6665913",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "continent",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "continent"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -70.79712693405153,
+        -33.58542560958862,
+        -70.4858269340515,
+        -33.28402560958865
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_santiago_landmarks",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-7881100.11992537,-3973269.73411767,-7846446.36244142,-3933064.58015247",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "santiago_landmarks",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "santiago_landmarks",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -178.22673299999974,
+        18.914589999999976,
+        -66.95324799999997,
+        71.38135599999991
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "zip",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19840109.1633087,2144882.84769387,-7453201.47431576,11533944.5841227",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "zipcode",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "zipcode",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -176.81043299999985,
+        -14.378412999999993,
+        173.42767000000012,
+        71.33952563568731
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "area_incorp",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19682447.3684982,-1617666.98264111,19305879.9138639,11519375.3146921",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "incorp",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "incorp",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.1473400000004,
+        -14.605254999999985,
+        179.77846999999988,
+        71.3525606439997
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_blkgrpy",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19942590.6657695,-1643748.77337188,20012847.7359938,11523911.9500267",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis",
+        "id": "block",
+        "project": "gis_hybrid",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "block",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "block",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -80.88607768357205,
+        25.374294346205673,
+        -80.03052679869731,
+        26.971022228987938
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_elem",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-9004196.98000041,2921788.7451941,-8908957.49114842,3119851.82579595",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "elem",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "elem",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -80.88607768357106,
+        25.37429434620691,
+        -80.03052679869803,
+        26.9710222289873
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_high",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-9004196.9800003,2921788.74519425,-8908957.4911485,3119851.82579587",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "high",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "high",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -80.88607768357106,
+        25.374310319846217,
+        -80.03052679869803,
+        26.9710222289873
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_mid",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-9004196.9800003,2921790.71323311,-8908957.4911485,3119851.82579587",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "mid",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "mid",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -124.73460388183628,
+        24.527681350707986,
+        -66.95423126220358,
+        49.38435745239254
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_prism",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13885392.5884267,2817841.4844342,-7453310.93056358,6340332.25006377",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "prism",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "prism",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.9999999749438,
+        -85.051,
+        179.9999999749438,
+        85.051
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_fa_parcel",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "custom",
+        "extent": "-20037508.34,-20037508.34,20037508.34,20037508.34",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "fa_parcel",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "fa_parcel",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -70.88807400000003,
+        -33.65818900000001,
+        -70.48709799999997,
+        -32.87880648750713
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "line_santiago_deleted_segments",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-7891224.3009959,-3982996.9851433,-7846587.85685557,-3879228.57803732",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "santiago_deleted_segments",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "santiago_deleted_segments",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -70.87095898389698,
+        -33.60458733836302,
+        -70.49005647750856,
+        -33.18649788004303
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "line_santiago_segments",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-7889319.06611839,-3975830.540956,-7846917.19306535,-3920084.68176359",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "santiago_segments",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "santiago_segments",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -177.38055999999992,
+        17.67636999999998,
+        -52.62473000000002,
+        76.42839000000009
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "streets_20121108_high",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19745913.6158257,1999702.74008509,-5858158.14673351,13577159.8980289",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nv_highway",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nv_highway"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -177.38055999999992,
+        17.67636999999998,
+        -52.62473000000002,
+        76.42839000000009
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "streets_20121108_mid",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19745913.6158257,1999702.74008509,-5858158.14673351,13577159.8980289",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nv_main_road",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nv_main_road"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -177.38055999999992,
+        17.67636999999998,
+        -52.62473000000002,
+        76.42839000000009
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select geom from streets_20121108 where func_class='5') as data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19745913.6158257,1999702.74008509,-5858158.14673351,13577159.8980289",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nv_detail_road",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nv_detail_road"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -70.87095898389698,
+        -33.60458733836302,
+        -70.49005647750856,
+        -33.18649788004303
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "line_santiago_segments",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-7889319.06611839,-3975830.540956,-7846917.19306535,-3920084.68176359",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "santiago_segments_label",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "santiago_segments_label",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -124.73460388183628,
+        24.527681350707986,
+        -66.95423126220358,
+        49.38435745239254
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "new_area_prism",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13885392.5884267,2817841.4844342,-7453310.93056358,6340332.25006377",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "prism_label",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "prism_label",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -176.81043299999985,
+        -14.378412999999993,
+        173.42767000000012,
+        71.33952563568731
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "area_incorp",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19682447.3684982,-1617666.98264111,19305879.9138639,11519375.3146921",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "incorp_label",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "incorp_label",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -177.38055999999992,
+        17.67636999999998,
+        -52.62473000000002,
+        76.42839000000009
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "streets_20121108_high",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19745913.6158257,1999702.74008509,-5858158.14673351,13577159.8980289",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nv_highway_label",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nv_highway_label"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -177.38055999999992,
+        17.67636999999998,
+        -52.62473000000002,
+        76.42839000000009
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "streets_20121108_mid",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19745913.6158257,1999702.74008509,-5858158.14673351,13577159.8980289",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nv_main_road_label",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nv_main_road_label"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -177.38055999999992,
+        17.67636999999998,
+        -52.62473000000002,
+        76.42839000000009
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select st_name,geom from streets_20121108 where func_class='5') as data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19745913.6158257,1999702.74008509,-5858158.14673351,13577159.8980289",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nv_detail_road_label",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nv_detail_road_label"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -178.22673299999974,
+        18.914589999999976,
+        -66.95324799999997,
+        71.38135599999991
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "zip",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19840109.1633087,2144882.84769387,-7453201.47431576,11533944.5841227",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "zipcode_label",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "zipcode_label",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -168.86100100000036,
+        0,
+        0,
+        65.507107
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_flpropertiesvalue",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-18797520.6461625,-7.08115455161362e-10,0,9743231.40372961",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "flpropertiesvalue",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "flpropertiesvalue",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -158.1240010000002,
+        0,
+        0,
+        65.507107
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_flpropertiessize",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-17602283.2735151,-7.08115455161362e-10,0,9743231.40372961",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "flpropertiessize",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "flpropertiessize",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -158.1240010000002,
+        0,
+        0,
+        65.507107
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_flpropertiesyear",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-17602283.2735151,-7.08115455161362e-10,0,9743231.40372961",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "flpropertiesyear",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "flpropertiesyear",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -168.86100100000036,
+        0,
+        0,
+        65.507107
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_flpropertiesowner",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-18797520.6461625,-7.08115455161362e-10,0,9743231.40372961",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "flpropertiesowner",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "flpropertiesowner",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.98330000000004,
+        -77.96530000000007,
+        179.98330000000004,
+        85.051
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_wtown3",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-20035649.307293,-14350131.7236006,20035649.307293,21751919.4389436",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "wtown",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "wtown",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -175.13010100000028,
+        17.892043999999974,
+        -65.28562000000002,
+        71.30873599999994
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_bg_mhinc",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19495393.6658946,2024916.34392907,-7267561.97452316,11508671.5760154",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "bg_mhinc",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "bg_mhinc",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -176.65274600000004,
+        17.932194999999968,
+        174.09842799999998,
+        71.32636199999999
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_blk_pop",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19664893.7319535,2029613.61248573,19380548.3528694,11514797.0130473",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "blk_pop",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "blk_pop",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.46806000000024,
+        -14.547500000000012,
+        179.9833299999998,
+        71.38832999999991
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_gnis",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19978293.0528567,-1637105.69520832,20035652.6468777,11536376.657329",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "gnis2",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "gnis2",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -165.41099000000028,
+        -79.651,
+        179.3329999999997,
+        81.646726
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_hotels",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-18413467.1784113,-15318756.2771952,19963258.2424301,16691247.1856069",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "hotels",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "hotels",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -165.4106899999997,
+        17.695110000000035,
+        -52.69372000000004,
+        71.30111999999991
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_nv_restrnts",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-18413433.782564,2001892.35485221,-5865838.07840334,11506026.5654611",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nv_restrnts",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nv_restrnts",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -176.65100499999977,
+        0,
+        0,
+        71.30267800000003
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_nypages",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-19664699.92472,-7.08115455161362e-10,0,11506567.5689647",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "nypages",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "nypages",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -166.53390999999957,
+        -25.649430999999996,
+        26.04515199999999,
+        66.89916000000004
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_physicianspecialty",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-18538470.0610128,-2955725.86025229,2899333.05827341,10127388.7379661",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "physicianspecialty",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "physicianspecialty",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -124.06519600000016,
+        -82.561999,
+        30.441106999999946,
+        48.13859899999999
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_re1n",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13810874.4438877,-17433784.4082352,3388688.53042355,6129943.82166162",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "re1n",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "re1n",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -122.48501999999974,
+        -82.561999,
+        30.441106999999946,
+        47.805107
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_re2n",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13634970.0562039,-17433784.4082352,3388688.53042355,6074492.61185443",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "re2n",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "re2n",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -80.26129199999998,
+        0,
+        0,
+        25.76346299999998
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_rinn",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-8934646.15585024,-7.08115455161362e-10,0,2969814.19507101",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "rinn",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "rinn",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -118.12796899999994,
+        -82.561999,
+        30.441106999999946,
+        48.40635599999998
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_rldn",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13149945.3575236,-17433784.4082352,3388688.53042355,6174726.21932991",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "rldn",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "rldn",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -121.72700099999996,
+        18.01310700000001,
+        -65.91400400000003,
+        44.713107000000015
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_rntn",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-13550587.7671123,2039082.75305626,-7337513.3614258,5576468.5681762",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "rntn",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "rntn",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -70.80152379365896,
+        -33.60458733836302,
+        -70.49067899999997,
+        -33.271366052267965
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "point_santiago_nodes",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-7881589.57609796,-3975830.540956,-7846986.4919521,-3931378.91024421",
+        "host": "131.94.133.221",
+        "user": "mapnik",
+        "password": "mapnik",
+        "dbname": "gis"
+      },
+      "id": "santiago_nodes",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "santiago_nodes",
+      "status": "off"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "",
+  "name": "gis_hybrid",
+  "description": "",
+  "attribution": ""
+}
